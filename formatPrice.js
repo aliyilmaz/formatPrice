@@ -1,8 +1,15 @@
+/**
+ *
+ * @package    formatPrice.js
+ * @version    Release: 1.0.1
+ * @license    GPL3
+ * @author     Ali YILMAZ <aliyilmaz.work@gmail.com>
+ * @category   money, currency, cash, credit, coin
+ * @link       https://github.com/aliyilmaz/formatPrice
+ *
+ */
+
 function formatPrice(price) {
-    // Check if the price is a string containing commas, and remove commas if present.
-    if (typeof price === 'string' && price.includes(',')) {
-        price = price.replace(/,/g, '');
-    }
 
     // Convert the price to a floating-point number.
     price = parseFloat(price);

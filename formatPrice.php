@@ -1,5 +1,16 @@
 <?php
 
+/**
+ *
+ * @package    formatPrice.php
+ * @version    Release: 1.0.1
+ * @license    GPL3
+ * @author     Ali YILMAZ <aliyilmaz.work@gmail.com>
+ * @category   money, currency, cash, credit, coin
+ * @link       https://github.com/aliyilmaz/formatPrice
+ *
+ */
+
 function formatPrice($price) {
 
     // Check the last two characters of the price and store them in $lastParams.
@@ -10,14 +21,6 @@ function formatPrice($price) {
     } else {
         $lastParams = $text;
     }
-    
-    // Remove trailing '00' if present.
-    if($lastParams == 00){
-       $price = substr($price, 0, -2);
-    }
-    
-    // Remove dots and commas from the price string.
-    $price = str_replace(['.', ','], '', $price);
     
     // Convert the price to a floating-point number.
     $price = floatval($price);
